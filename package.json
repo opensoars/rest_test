@@ -1,0 +1,34 @@
+{
+  "name": "rest_test",
+  "version": "0.0.8",
+
+  "description": "Travis.ci RESTful API testing",
+
+  "scripts": {
+    "test": "node node_modules/istanbul/lib/cli.js cover node_modules/mocha/bin/_mocha \"./test/mocha/*.js\" && npm run coveralls",
+    "localTest": "node node_modules/istanbul/lib/cli.js cover node_modules/mocha/bin/_mocha \"./test/mocha/*.js\"",
+    "coveralls": "node node_modules/coveralls/bin/coveralls.js < coverage/lcov.info"
+  },
+
+  "engines": {
+    "node": ">=0.8"
+  },
+
+  "dependencies": {
+    "ezlog": "0.0.12",
+    "opensoars_cls": "0.0.8"
+  },
+
+  "devDependencies": {
+    "mocha": "*",
+    "istanbul": "*",
+    "coveralls": "*"
+  },
+
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/opensoars/rest_test"
+  },
+
+  "readmeFilename": "README.md"
+}
