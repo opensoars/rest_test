@@ -19,6 +19,8 @@ describe('#get_polls', function (){
 
         assert.equal(d.length, 0);
         done();
+      }).on('error', function (err){
+        console.log(err);
       });
 
     });
